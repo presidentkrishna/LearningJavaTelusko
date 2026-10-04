@@ -23,7 +23,7 @@ public class FirstCode {
         double d = 9;
         System.out.println(d);
 
-        int i = (int)1,67;
+        int i = (int)1.67;
         System.out.println(i);
     }
 }
