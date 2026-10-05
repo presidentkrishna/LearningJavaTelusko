@@ -27,9 +27,7 @@ public class IterationDemo {
             }
             System.out.println();
         }
-
-
-
-
     }
+
+
 }
