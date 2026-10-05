@@ -1,12 +1,26 @@
 class Casio{
-    public void add(int a,int b){
-        System.out.println(a+b);
+    int num1;
+    int num2;
+    String operation;
+    public Casio(){
+        num1=0;
+        num2=0;
+        operation="nothing";
     }
-    public void add(int a,int b,int c){
-        System.out.println(a+b);
+    public Casio(int i){
+        num1=i;
+        num2=0;
+        operation="nothing";
     }
-    public void add(double a,double b){
-        System.out.println(a+b);
+    public Casio(int i,int j){
+        num1=i;
+        num2=j;
+        operation="nothing";
+    }
+    public Casio(int i,int j,String op){
+        num1=i;
+        num2=j;
+        operation=op;
     }
 }
 
@@ -16,9 +30,6 @@ public class MethodOverloadingDemo {
     public static void main(String[] args) {
 
         Casio obj = new Casio();
-        obj.add(1,2);
-        obj.add(2,3,4);
-        obj.add(3.4,5.1);
 
     }
 
