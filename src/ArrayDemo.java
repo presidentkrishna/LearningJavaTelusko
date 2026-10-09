@@ -2,7 +2,10 @@
 public class ArrayDemo {
     public static void main(String[] args) {
         int a[] = {1,2,3,4};
-        int b[] = {1,2,3,4};
+
+        for(int k:a){
+            System.out.println(k);
+        }
 
         int d[][] = {
                 {1,1,1,1,1},
@@ -10,9 +13,9 @@ public class ArrayDemo {
                 {1,1,1,1,1,1,1,1}
         };
 
-        for(int i=0;i<d.length;i++){
-            for(int j=0;j<d[i].length;j++){
-                System.out.print(d[i][j]);
+        for(int k[] : d){
+            for(int l :k){
+                System.out.print(l);
             }
             System.out.println();
         }
