@@ -17,7 +17,5 @@ public class InnerDemo {
         Outer obj = new Outer();
         obj.show();
 
-        Outer.Inner obj1 = new Outer.Inner;
-
     }
 }
