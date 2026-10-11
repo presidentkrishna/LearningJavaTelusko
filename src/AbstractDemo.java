@@ -1,25 +1,29 @@
-abstract class Human{
-    public abstract void eat();
-    public void walk(){
-
+interface Writer{
+    void write();
+}
+class Pen implements Writer{
+    public void write(){
+        System.out.println("write");
     }
 }
-class Man extends Human{
-    public void eat(){
-
+class Pencil implements Writer{
+    public void write(){
+        System.out.println("write2");
     }
 }
-class Printer{
-    public void lulli(Number i){
-        System.out.println(i);
+class Kit{
+    public void doSo(Writer p){
+        p.write();
     }
 }
 public class AbstractDemo {
     public static void main(String[] args) {
-        Human obj = new Man();
-        obj.eat();
-        obj.walk();
-        Printer printer = new Printer();
-        printer.lulli(5);
+
+        Kit k = new Kit();
+        Writer p = new Pen();
+
+        Writer pc = new Pencil();
+
+        k.doSo(pc);
     }
 }

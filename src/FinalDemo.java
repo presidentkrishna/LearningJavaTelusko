@@ -4,12 +4,11 @@ final class X{
         System.out.println("X");
     }
 }
-class Y extends X{
+class Y{
 
 }
 public class FinalDemo {
     public static void main(String[] args) {
         Y  obj = new Y();
-        obj.X();
     }
 }
