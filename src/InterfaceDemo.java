@@ -1,30 +1,19 @@
 @FunctionalInterface
 interface Abc{
+    int num=8;
     void show();
-    default void show2(){
+    static void show2(){
         System.out.println("Abc");
     }
 }
-interface Abc2{
-    default void show2(){
-        System.out.println("Abc2");
-    }
-}
-class Abcimp implements Abc, Abc2{
+class Imp implements Abc{
     @Override
     public void show() {
-        System.out.println("Abc");
-    }
-
-    @Override
-    public void show2() {
-        Abc2.super.show2();
+        System.out.println("Imp");
     }
 }
 public class InterfaceDemo {
     public static void main(String[] args){
-        Abc obj = new Abcimp();
-        obj.show2();
-        obj.show();
+        Abc.show2();
     }
 }
