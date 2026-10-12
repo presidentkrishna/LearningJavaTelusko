@@ -1,18 +1,13 @@
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
 
-public class Userinput
-{
-    public static void main(String[] args) throws Exception
-    {
+import java.util.Scanner;
+
+public class Userinput {
+    public static void main(String[] args) {
         int n=0;
         System.out.println("Enter a number");
 
-        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in)))
-        {
-            n = Integer.parseInt(br.readLine());
-        }
-
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
         System.out.println(n);
     }
 }
