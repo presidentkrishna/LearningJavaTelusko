@@ -1,6 +1,6 @@
 
 public class ThreadDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Thread thread1 = new Thread(() -> {
             for(int i=1;i<=5;i++){
                 System.out.println("Hi");
@@ -30,5 +30,12 @@ public class ThreadDemo {
             throw new RuntimeException(e);
         }
         thread2.start();
+
+
+
+        thread1.join();
+        thread2.join();
+        System.out.println(thread1.isAlive());
+        System.out.println("Bye");
     }
 }
