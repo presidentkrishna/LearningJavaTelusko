@@ -1,18 +1,16 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-
+import java.util.*;
 public class CollectionDemo {
     public static void main(String[] args){
         List<Integer> values = new ArrayList<>();
-        values.add(4);
-        values.add(6);
-        values.add(9);
+        values.add(404);
+        values.add(634);
+        values.add(955);
+        values.add(287);
 
-        for(int i=0;i<values.size();i++){
-            System.out.println(values.get(i));
-        }
+        Comparator<Integer> ca = (o1,o2) -> o1%10>o2%10?1:-1;
+
+        Collections.sort(values,ca);
+
         for(Object o:values){
             System.out.println(o);
         }
